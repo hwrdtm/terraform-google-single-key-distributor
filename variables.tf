@@ -34,8 +34,8 @@ variable "public_key_file" {
 }
 
 variable "service_account_email_target" {
-    type        = string
-    description = "Email of the Service Account that a new key will be created for and encrypted before returned to the Cloud Function invoker"
+  type        = string
+  description = "Email of the Service Account that a new key will be created for and encrypted before returned to the Cloud Function invoker"
 }
 
 variable "function_members" {

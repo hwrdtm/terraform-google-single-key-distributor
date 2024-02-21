@@ -67,7 +67,7 @@ resource "google_cloudfunctions_function" "function" {
   source_archive_object = google_storage_bucket_object.archive.name
   entry_point           = "GenerateAndEncrypt"
   environment_variables = {
-    PUBLIC_KEY = file(var.public_key_file)
+    PUBLIC_KEY                   = file(var.public_key_file)
     SERVICE_ACCOUNT_EMAIL_TARGET = var.service_account_email_target
   }
 }
