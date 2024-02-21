@@ -33,8 +33,8 @@ resource "google_storage_bucket_object" "archive" {
 // Service Account for the Cloud Function
 resource "google_service_account" "distributor" {
   project      = var.project_id
-  account_id   = "key-distributor"
-  display_name = "Cloud Function to generate and encrypt SA keys"
+  account_id   = "${var.function_name}-key-distributor"
+  display_name = "Service account for the Cloud Function to generate and encrypt SA keys"
 }
 
 // Grant the Cloud Function the permission to create Service Account keys based on the organization ID
