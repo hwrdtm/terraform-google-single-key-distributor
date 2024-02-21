@@ -84,7 +84,7 @@ resource "google_cloudfunctions_function_iam_member" "invoker" {
 
 // Local file to store the Cloud Function invoker script
 resource "local_file" "invoker" {
-  filename        = "get-key"
+  filename        = "get-key-${var.function_name}"
   file_permission = "0755"
   content = templatefile("${path.module}/templates/get-key.tpl", {
     project  = var.project_id
