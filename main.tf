@@ -33,7 +33,7 @@ resource "google_storage_bucket_object" "archive" {
 // Service Account for the Cloud Function
 resource "google_service_account" "distributor" {
   project      = var.project_id
-  account_id   = "${var.function_name}-key-distributor"
+  account_id   = "${var.function_name}-distributor"
   display_name = "Service account for the Cloud Function to generate and encrypt SA keys"
 }
 
