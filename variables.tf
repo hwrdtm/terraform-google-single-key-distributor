@@ -23,8 +23,7 @@ variable "region" {
 
 variable "function_name" {
   type        = string
-  description = "Name of the Cloud Function"
-  default     = "key-distributor"
+  description = "Name of the Cloud Function, must be unique within the project"
 }
 
 variable "public_key_file" {
